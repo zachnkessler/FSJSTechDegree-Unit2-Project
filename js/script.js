@@ -50,5 +50,6 @@ This function will create and insert/append the elements needed for the paginati
 
 
 
+
 // Call functions
 showPage(data, 1);
