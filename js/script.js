@@ -11,17 +11,6 @@ For assistance:
    Check out the "Project Resources" section of the Instructions tab: https://teamtreehouse.com/projects/data-pagination-and-filtering#instructions
    Reach out in your Slack community: https://treehouse-fsjs-102.slack.com/app_redirect?channel=unit-2
 */
-function searchBar() {
-   const studentsHeading = document.querySelector("header");
-   const search = 
-   `<label for="search" class="student-search">
-      <input id="search" placeholder="Search by name...">
-      <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
-   </label>`;
-   studentsHeading.insertAdjacentHTML("beforeend", search);
-   return search;
-};
-
 
 /*
 Create the `showPage` function
@@ -85,4 +74,3 @@ function addPagination(list) {
 // Call functions
 showPage(data, 1);
 addPagination(data);
-searchBar();
