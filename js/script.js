@@ -33,7 +33,7 @@ function showPage(list, page) {
                <span class="email">${list[i].email}</span>
             </div>
             <div class="joined-details">
-               <span class="date">${list[i].registered.date}</span>
+               <span class="date">Joined ${list[i].registered.date}</span>
             </div>
          </li>`;
          studentList.insertAdjacentHTML("beforeend", studentItem);
@@ -47,7 +47,25 @@ function showPage(list, page) {
 Create the `addPagination` function
 This function will create and insert/append the elements needed for the pagination buttons
 */
-
+function addPagination(list) {
+   let numOfPages = Math.ceil(list.length / 9);
+   const linkList = document.querySelector(".link-list");
+   linkList.innerHTMl = "";
+   for (let i = 1; i <= numOfPages; i++) {
+      let button = 
+      `<li>
+         <button type="button">[i]</button>
+      </li>`;
+      linkList.insertAdjacentHTML("beforeend", button);
+      const firstButton = document.querySelector("button");
+      firstButton.className = "active";
+      linkList.addEventListener("click", (e) => {
+         if (e.target.tagName === "BUTTON") {
+            
+         }
+      });
+   }
+}
 
 
 
