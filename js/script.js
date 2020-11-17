@@ -54,20 +54,25 @@ function addPagination(list) {
    for (let i = 1; i <= numOfPages; i++) {
       let button = 
       `<li>
-         <button type="button">[i]</button>
+         <button type="button">${[i]}</button>
       </li>`;
       linkList.insertAdjacentHTML("beforeend", button);
       const firstButton = document.querySelector("button");
       firstButton.className = "active";
-      linkList.addEventListener("click", (e) => {
-         if (e.target.tagName === "BUTTON") {
-            
-         }
-      });
    }
+   linkList.addEventListener("click", (e) => {
+      if (e.target.tagName === "BUTTON") {
+         const activeButton = document.querySelector(".active");
+         activeButton.className = "";
+         const inactiveButton = e.target;
+         inactiveButton.className = "active";
+         showPage(data, e.target.textContent);
+      }
+   });
 }
 
 
 
 // Call functions
 showPage(data, 1);
+addPagination(data);
