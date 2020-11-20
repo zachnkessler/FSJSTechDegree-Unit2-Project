@@ -10,6 +10,7 @@ For assistance:
    Reach out in your Slack community: https://treehouse-fsjs-102.slack.com/app_redirect?channel=unit-2
 */
 
+
 /*
 Create the `showPage` function
 This function will create and insert/append the elements needed to display a "page" of nine students
